@@ -50,4 +50,15 @@ git clone https://github.com/thetechhustle/ai_workshop_linkedin2026.git
 cd ai_workshop_linkedin2026
 make install
 make test
+make run
 ```
+
+`make run` opens the workshop book at <http://127.0.0.1:8001>.
+
+Later, when the lab calls for the example API:
+
+```bash
+make startapp
+```
+
+Open <http://127.0.0.1:8000/docs>.
