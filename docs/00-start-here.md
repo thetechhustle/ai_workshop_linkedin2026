@@ -12,7 +12,17 @@ make test
 make run
 ```
 
-Open the API docs at <http://127.0.0.1:8000/docs>.
+`make run` starts the workshop book. Open <http://127.0.0.1:8001>.
+
+When it is time to start the example app, run:
+
+```bash
+make startapp
+# or
+make example-app
+```
+
+Then open the API docs at <http://127.0.0.1:8000/docs>.
 
 ## How to use this repo
 
@@ -36,6 +46,6 @@ Open the API docs at <http://127.0.0.1:8000/docs>.
 
 Pick your path:
 
-- **Bronze:** clone the repo, run the app, explain what it does.
+- **Bronze:** clone the repo, open the workshop book, run the app, and explain what it does.
 - **Silver:** make one small change and verify it.
 - **Gold:** add a test, Docker step, CI edit, or production-readiness note.
