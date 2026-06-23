@@ -64,15 +64,17 @@ make test
 make run
 ```
 
-Open <http://127.0.0.1:8000/docs> in your browser.
+`make run` starts the workshop book. Open <http://127.0.0.1:8001> in your browser.
 
-To serve the workshop book locally:
+To start the example app instead:
 
 ```bash
-make serve
+make startapp
+# or
+make example-app
 ```
 
-Open <http://127.0.0.1:8001>.
+Open <http://127.0.0.1:8000/docs> for the Opportunity Tracker API docs.
 
 ---
 
@@ -85,7 +87,7 @@ slides/                  # Bobby D AI Workshop presenter notes
 templates/               # AGENTS.md, CLAUDE.md, PR, and issue templates
 scripts/                 # tmux lab cockpit helper
 .github/workflows/       # GitHub Actions quality gate
-Makefile                 # install, run, test, lint, docs, tmux shortcuts
+Makefile                 # install, run docs, start app, test, lint, and build shortcuts
 ```
 
 ---
@@ -93,14 +95,16 @@ Makefile                 # install, run, test, lint, docs, tmux shortcuts
 ## Core make commands
 
 ```bash
-make help       # See all commands
-make install    # Create .venv and install docs + starter app deps
-make run        # Run the FastAPI starter app
-make test       # Run the starter app tests
-make lint       # Run ruff checks
-make check      # Run lint, tests, and docs build
-make serve      # Serve the MkDocs course site
-make tmux       # Launch the workshop tmux cockpit
+make help         # See all commands
+make install      # Create .venv and install docs + starter app deps
+make run          # Serve the MkDocs workshop book
+make serve        # Same as make run
+make startapp     # Run the FastAPI starter app
+make example-app  # Same as make startapp
+make test         # Run the starter app tests
+make lint         # Run ruff checks
+make check        # Run lint, tests, and docs build
+make tmux         # Launch the workshop tmux cockpit
 ```
 
 ---
@@ -109,7 +113,7 @@ make tmux       # Launch the workshop tmux cockpit
 
 | Level | You won if... |
 |---|---|
-| **Bronze** | You cloned the repo, ran the app, and can explain the project. |
+| **Bronze** | You cloned the repo, opened the workshop book, ran the app, and can explain the project. |
 | **Silver** | You made one small change and verified it with a test or checklist. |
 | **Gold** | You packaged, automated, or documented a production-minded next step. |
 
@@ -123,8 +127,8 @@ No shame in Bronze. Bronze is momentum. Momentum compounds.
 - [Mac setup](docs/01-setup/mac.md)
 - [4-hour agenda](docs/02-course/agenda.md)
 - [Labs](docs/04-labs/lab-00-clone-and-orientation.md)
-- [Prompt library](docs/05-prompts/prompt-library.md)
-- [Production-readiness checklist](docs/06-checklists/production-readiness.md)
+- [Prompt library](docs/05-prompts/library.md)
+- [Production-readiness checklist](docs/06-checklists/production.md)
 - [Instructor run-of-show](docs/08-instructor/run-of-show.md)
 
 ---
