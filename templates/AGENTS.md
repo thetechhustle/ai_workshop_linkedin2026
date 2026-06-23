@@ -7,7 +7,8 @@ This is a student learning project. Prioritize readability, small safe changes, 
 ## Setup commands
 
 - Install dependencies: `make install`
-- Run app: `make run`
+- Serve workshop docs: `make run`
+- Run example app: `make startapp`
 - Run tests: `make test`
 - Run lint: `make lint`
 
