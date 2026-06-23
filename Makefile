@@ -1,11 +1,20 @@
 .PHONY: help install setup run serve docs-serve docs-build startapp app example-app test lint format check clean tmux docker-build docker-run
 
 VENV := .venv
-PY := $(VENV)/bin/python
-PIP := $(PY) -m pip
-MKDOCS := $(VENV)/bin/mkdocs
 PORT ?= 8000
 DOCS_PORT ?= 8001
+
+ifeq ($(OS),Windows_NT)
+PYTHON ?= py -3
+PY := $(VENV)/Scripts/python.exe
+MKDOCS := $(VENV)/Scripts/mkdocs.exe
+else
+PYTHON ?= python3
+PY := $(VENV)/bin/python
+MKDOCS := $(VENV)/bin/mkdocs
+endif
+
+PIP := $(PY) -m pip
 
 help:
 	@echo "LinkedIn AI Workshop 2026"
@@ -23,7 +32,7 @@ help:
 	@echo "make clean        Remove generated files"
 
 $(PY):
-	python3 -m venv $(VENV)
+	$(PYTHON) -m venv $(VENV)
 
 install: $(PY)
 	$(PIP) install --upgrade pip
