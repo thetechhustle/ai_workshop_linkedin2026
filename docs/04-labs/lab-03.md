@@ -15,7 +15,7 @@ make lint
 
 ```bash
 cat starter_app/Dockerfile
-cat .github/workflows/student-quality-gate.yml
+cat .github/workflows/tests.yml
 ```
 
 ## Questions
