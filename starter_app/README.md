@@ -17,10 +17,20 @@ Students can use this when they do not have a project ready or when the room nee
 
 ```bash
 make install
-make run
+make startapp
+```
+
+You can also use the alias:
+
+```bash
+make example-app
 ```
 
 Open <http://127.0.0.1:8000/docs>.
+
+## Workshop book
+
+From the repo root, `make run` starts the MkDocs workshop book at <http://127.0.0.1:8001>.
 
 ## Run tests
 
