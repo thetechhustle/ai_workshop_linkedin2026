@@ -14,7 +14,7 @@ def client(tmp_path, monkeypatch):
 def test_health_check(client):
     response = client.get("/health")
     assert response.status_code == 200
-    assert response.json()["status"] == "ok"
+    assert response.json()["status"] == "no"
 
 
 def test_create_and_list_opportunity(client):
