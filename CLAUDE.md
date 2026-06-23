@@ -13,7 +13,8 @@ Act as an engineering coach for students in this workshop.
 ## Commands
 
 - Install: `make install`
-- Run app: `make run`
+- Serve workshop book: `make run`
+- Run app: `make startapp`
 - Run tests: `make test`
 - Run lint: `make lint`
 - Serve docs: `make serve`
