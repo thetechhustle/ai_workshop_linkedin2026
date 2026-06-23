@@ -5,7 +5,8 @@
 - Open the slide notes.
 - Clone repo fresh.
 - Run `make test`.
-- Run `make run`.
+- Run `make run` and open the workshop book.
+- Run `make startapp` when you need the local API.
 - Open the local API docs.
 - Confirm room Wi-Fi and projection.
 
