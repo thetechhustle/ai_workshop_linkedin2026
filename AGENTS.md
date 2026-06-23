@@ -18,7 +18,8 @@ This workshop is CLI-first, beginner-aware, and culture-forward. Optimize for cl
 ## Commands
 
 - Install everything: `make install`
-- Run starter app: `make run`
+- Serve workshop book: `make run`
+- Run starter app: `make startapp`
 - Run tests: `make test`
 - Run lint: `make lint`
 - Run full check: `make check`
