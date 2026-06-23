@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="AI Workshop mark">
+  <rect width="240" height="240" rx="44" fill="#050505"/>
+  <circle cx="120" cy="120" r="78" fill="#ef3340" opacity="0.16"/>
+  <path d="M60 132c0-37 25-64 60-64s60 27 60 64" fill="none" stroke="#ef3340" stroke-width="14" stroke-linecap="round"/>
+  <rect x="76" y="98" width="88" height="70" rx="20" fill="#111827" stroke="#fff" stroke-width="8"/>
+  <circle cx="104" cy="132" r="8" fill="#fff"/>
+  <circle cx="136" cy="132" r="8" fill="#fff"/>
+  <path d="M99 154h42" stroke="#ef3340" stroke-width="7" stroke-linecap="round"/>
+  <text x="120" y="216" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#fff" font-weight="700">BUILD MODE</text>
+</svg>

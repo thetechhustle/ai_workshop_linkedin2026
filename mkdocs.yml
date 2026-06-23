@@ -1,0 +1,26 @@
+site_name: LinkedIn AI Workshop 2026
+docs_dir: docs
+
+theme:
+  name: readthedocs
+
+nav:
+  - Home: index.md
+  - Start Here: 00-start-here.md
+  - Mac Setup: 01-setup/mac.md
+  - GitHub Setup: 01-setup/github.md
+  - Agenda: 02-course/agenda.md
+  - Glossary: 02-course/glossary.md
+  - Module 01: 03-modules/module-01.md
+  - Module 02: 03-modules/module-02.md
+  - Module 03: 03-modules/module-03.md
+  - Module 04: 03-modules/module-04.md
+  - Lab 00: 04-labs/lab-00-clone-and-orientation.md
+  - Lab 01: 04-labs/lab-01-terminal-tmux-cockpit.md
+  - Lab 02: 04-labs/lab-02-git-ai-change.md
+  - Lab 03: 04-labs/lab-03.md
+  - Prompts: 05-prompts/library.md
+  - Quality: 06-checklists/quality.md
+  - Production: 06-checklists/production.md
+  - Resources: 07-resources/videos-and-docs.md
+  - Instructor: 08-instructor/run-of-show.md
