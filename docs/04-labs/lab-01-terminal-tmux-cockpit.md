@@ -20,11 +20,12 @@ brew install tmux
 
 | Pane | Purpose |
 |---|---|
-| App | Run `make run`. |
+| Workshop book | Run `make run`. |
+| Example app | Run `make startapp` when it is time for the API lab. |
 | Tests | Run `make test`. |
 | Git | Run `git status` and `git diff`. |
 | Notes / AI | Keep prompts and explanations. |
 
 ## Checkpoint
 
-You can see the app, tests, and Git status without losing your place.
+You can see the workshop book, app, tests, and Git status without losing your place.
