@@ -1,0 +1,84 @@
+site_name: LinkedIn AI Workshop 2026
+site_description: CLI-first AI engineering workshop for students learning to build, verify, and ship responsibly.
+site_url: https://thetechhustle.github.io/ai_workshop_linkedin2026/
+repo_url: https://github.com/thetechhustle/ai_workshop_linkedin2026
+repo_name: thetechhustle/ai_workshop_linkedin2026
+edit_uri: edit/main/docs/
+docs_dir: docs
+
+theme:
+  name: material
+  language: en
+  logo: assets/images/ai-workshop-mark.svg
+  favicon: assets/images/ai-workshop-mark.svg
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: red
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: red
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+
+nav:
+  - Home: index.md
+  - Start Here: 00-start-here.md
+  - Setup:
+      - Mac Setup: 01-setup/mac.md
+      - GitHub Setup: 01-setup/github.md
+  - Course:
+      - Agenda: 02-course/agenda.md
+      - Glossary: 02-course/glossary.md
+  - Modules:
+      - AI Era Engineer: 03-modules/01-ai-era-engineer.md
+      - Terminal tmux Git: 03-modules/02-terminal-tmux-git.md
+      - AI Agents: 03-modules/03-ai-agents.md
+      - Production Readiness: 03-modules/04-production-readiness.md
+  - Labs:
+      - Lab 00 Clone and Orientation: 04-labs/lab-00-clone-and-orientation.md
+      - Lab 01 Terminal tmux Cockpit: 04-labs/lab-01-terminal-tmux-cockpit.md
+      - Lab 02 Git AI Change: 04-labs/lab-02-git-ai-change.md
+      - Lab 03 Quality and Production: 04-labs/lab-03-quality-and-production.md
+  - Prompts: 05-prompts/prompt-library.md
+  - Checklists:
+      - Quality Gate: 06-checklists/quality-gate.md
+      - Production Readiness: 06-checklists/production-readiness.md
+  - Resources: 07-resources/videos-and-docs.md
+  - Instructor: 08-instructor/run-of-show.md
