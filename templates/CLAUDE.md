@@ -4,7 +4,8 @@ Act as an engineering coach. Help me understand the code before changing it.
 
 ## Commands
 
-- Start app: `make run`
+- Serve workshop docs: `make run`
+- Start example app: `make startapp`
 - Run tests: `make test`
 - Lint: `make lint`
 
