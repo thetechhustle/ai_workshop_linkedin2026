@@ -1,21 +1,24 @@
-.PHONY: help install setup run test lint format check serve docs-serve docs-build clean tmux docker-build docker-run
+.PHONY: help install setup run serve docs-serve docs-build startapp app example-app test lint format check clean tmux docker-build docker-run
 
 VENV := .venv
 PY := $(VENV)/bin/python
 PIP := $(PY) -m pip
 MKDOCS := $(VENV)/bin/mkdocs
 PORT ?= 8000
+DOCS_PORT ?= 8001
 
 help:
 	@echo "LinkedIn AI Workshop 2026"
 	@echo ""
 	@echo "make install      Create .venv and install docs + starter app dependencies"
-	@echo "make run          Run the Opportunity Tracker API on http://127.0.0.1:$(PORT)"
+	@echo "make run          Serve the workshop book at http://127.0.0.1:$(DOCS_PORT)"
+	@echo "make serve        Same as make run"
+	@echo "make startapp     Run the Opportunity Tracker API at http://127.0.0.1:$(PORT)"
+	@echo "make example-app  Same as make startapp"
 	@echo "make test         Run the starter app tests"
 	@echo "make lint         Run ruff checks"
 	@echo "make format       Format starter app code with ruff"
 	@echo "make check        Run lint, tests, and docs build"
-	@echo "make serve        Serve the course site locally"
 	@echo "make tmux         Launch the workshop tmux cockpit"
 	@echo "make clean        Remove generated files"
 
@@ -29,8 +32,19 @@ install: $(PY)
 
 setup: install
 
-run: install
+run: docs-serve
+
+serve: docs-serve
+
+docs-serve: install
+	$(MKDOCS) serve --dev-addr 127.0.0.1:$(DOCS_PORT)
+
+startapp: install
 	$(PY) -m uvicorn opportunity_tracker.app:app --app-dir starter_app/src --reload --host 127.0.0.1 --port $(PORT)
+
+app: startapp
+
+example-app: startapp
 
 test: install
 	$(PY) -m pytest starter_app/tests -q
@@ -42,11 +56,6 @@ format: install
 	$(PY) -m ruff format starter_app/src starter_app/tests
 
 check: lint test docs-build
-
-docs-serve: install
-	$(MKDOCS) serve --dev-addr 127.0.0.1:8001
-
-serve: docs-serve
 
 docs-build: install
 	$(MKDOCS) build --strict
